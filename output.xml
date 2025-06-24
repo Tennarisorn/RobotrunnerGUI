@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3 (Python 3.12.1 on win32)" generated="2025-06-23T17:12:17.757292" rpa="false" schemaversion="5">
+<suite id="s1" name="Starter" source="C:\Users\t001404\OneDrive - The Siam Commercial Bank PCL\Pnanwork\starter.robot">
+<test id="s1-t1" name="Type In Search Box" line="8">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-06-23T17:12:18.653232" level="INFO">Opening browser 'edge' to base url 'https://www.google.com'.</msg>
+<arg>${url}</arg>
+<arg>${driver}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-06-23T17:12:18.653232" elapsed="48.046622"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-06-23T17:13:06.700433" elapsed="0.059015"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${test1}</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-06-23T17:13:06.760067" elapsed="0.073553"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-23T17:13:06.833620" level="INFO">Typing text 'Hello, I am Ten' into text field 'xpath=//*[@id="APjFqb"]'.</msg>
+<arg>${test1}</arg>
+<arg>Hello, I am Ten</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-23T17:13:06.833620" elapsed="0.234162"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-06-23T17:13:17.069310" level="INFO">Slept 10 seconds.</msg>
+<arg>10s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-06-23T17:13:07.067782" elapsed="10.001528"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-06-23T17:13:17.069310" elapsed="3.060027"/>
+</kw>
+<status status="PASS" start="2025-06-23T17:12:18.653232" elapsed="61.476105"/>
+</test>
+<status status="PASS" start="2025-06-23T17:12:17.762666" elapsed="62.366671"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Starter" id="s1" pass="1" fail="0" skip="0">Starter</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
