@@ -36,7 +36,6 @@ Open Notebooks And Save StatusWithExtraColumns
     ${total}=    Get Total Rows
 
     FOR    ${index}    IN RANGE    ${total}
-    # FOR    ${index}    IN RANGE    10
         ${link}=    Get Notebook Link    ${index}
         Run Keyword If    '${link}' == '' or '${link}' == 'nan'    Continue For Loop
 
