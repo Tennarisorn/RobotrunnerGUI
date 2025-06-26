@@ -1,5 +1,5 @@
 *** Settings ***
-Library    ExcelHandler.py    C:/Users/t001404/OneDrive - The Siam Commercial Bank PCL/QA/RobotrunnerGUI/UDP_SIT_MVP3.xlsx    BD1
+Library    ExcelHandler.py    C:/Users/t001404/OneDrive - The Siam Commercial Bank PCL/production/UDP_SIT_MVP3.xlsx    BD1
 Library    SeleniumLibrary
 
 *** Variables ***
@@ -34,7 +34,7 @@ Open Notebooks And Save StatusWithExtraColumns
     Sleep    30s
 
     ${total}=    Get Total Rows
-
+    # Set Test Variable    ${total}    20
     FOR    ${index}    IN RANGE    ${total}
         ${link}=    Get Notebook Link    ${index}
         Run Keyword If    '${link}' == '' or '${link}' == 'nan'    Continue For Loop
@@ -45,21 +45,21 @@ Open Notebooks And Save StatusWithExtraColumns
         ${extracted_text}=    Get Text    xpath=${TEXT_XPATH}
         Log    Extracted status: ${extracted_text}
         Update Status    ${index}    ${extracted_text}
-        Wait Until Element Is Visible    xpath=${PARAM1_XPATH}    timeout=10s
-        Wait Until Element Is Visible    xpath=${VALUE1_XPATH}    timeout=10s
-        Wait Until Element Is Visible    xpath=${PARAM2_XPATH}    timeout=10s
-        Wait Until Element Is Visible    xpath=${VALUE2_XPATH}    timeout=10s
-        Wait Until Element Is Visible    xpath=${PARAM3_XPATH}    timeout=10s
-        Wait Until Element Is Visible    xpath=${VALUE3_XPATH}    timeout=10s
-        Wait Until Element Is Visible    xpath=${PARAM4_XPATH}    timeout=10s
-        Wait Until Element Is Visible    xpath=${VALUE4_XPATH}    timeout=10s
-        Wait Until Element Is Visible    xpath=${PARAM5_XPATH}    timeout=10s
-        Wait Until Element Is Visible    xpath=${VALUE5_XPATH}    timeout=10s
-        Wait Until Element Is Visible    xpath=${PARAM6_XPATH}    timeout=10s
-        Wait Until Element Is Visible    xpath=${VALUE6_XPATH}    timeout=10s
-        Wait Until Element Is Visible    xpath=${PARAM7_XPATH}    timeout=10s
-        Wait Until Element Is Visible    xpath=${VALUE7_XPATH}    timeout=10s
-        Wait Until Element Is Visible    xpath=${NOTE_VALUE_XPATH}    timeout=10s
+        Wait Until Element Is Visible    xpath=${PARAM1_XPATH}    timeout=20s
+        Wait Until Element Is Visible    xpath=${VALUE1_XPATH}    timeout=20s
+        Wait Until Element Is Visible    xpath=${PARAM2_XPATH}    timeout=20s
+        Wait Until Element Is Visible    xpath=${VALUE2_XPATH}    timeout=20s
+        Wait Until Element Is Visible    xpath=${PARAM3_XPATH}    timeout=20s
+        Wait Until Element Is Visible    xpath=${VALUE3_XPATH}    timeout=20s
+        Wait Until Element Is Visible    xpath=${PARAM4_XPATH}    timeout=20s
+        Wait Until Element Is Visible    xpath=${VALUE4_XPATH}    timeout=20s
+        Wait Until Element Is Visible    xpath=${PARAM5_XPATH}    timeout=20s
+        Wait Until Element Is Visible    xpath=${VALUE5_XPATH}    timeout=20s
+        Wait Until Element Is Visible    xpath=${PARAM6_XPATH}    timeout=20s
+        Wait Until Element Is Visible    xpath=${VALUE6_XPATH}    timeout=20s
+        Wait Until Element Is Visible    xpath=${PARAM7_XPATH}    timeout=20s
+        Wait Until Element Is Visible    xpath=${VALUE7_XPATH}    timeout=20s
+        Wait Until Element Is Visible    xpath=${NOTE_VALUE_XPATH}    timeout=20s
         # Params 1 to 7 extraction and add to CSV
         ${param1}=    Get Text    xpath=${PARAM1_XPATH}
         ${value1}=    Get Text    xpath=${VALUE1_XPATH}
